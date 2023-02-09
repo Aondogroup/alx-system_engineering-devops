@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Check if the file hello exists
+if [ -f hello ]; then
+  # Add execute permission to the owner of the file hello
+  chmod u+x hello
+  # Confirm that execute permission has been added
+  if [ -x hello ]; then
+    echo "Execute permission has been added to the owner of the file hello."
+  else
+    echo "Failed to add execute permission to the owner of the file hello."
+  fi
+else
+  echo "File hello does not exist."
+fi
